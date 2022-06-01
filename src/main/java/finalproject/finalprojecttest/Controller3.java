@@ -267,6 +267,8 @@ public class Controller3 implements Initializable {
         GridPane.setColumnIndex(player2, data2.getPosPlayer2());
         columnPlayer1 = data.getPosPlayer();
         columnPlayer2 = data2.getPosPlayer2();
+
+        
     }
 
     @FXML
