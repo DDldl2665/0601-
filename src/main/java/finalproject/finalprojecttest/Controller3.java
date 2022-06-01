@@ -280,5 +280,5 @@ public class Controller3 implements Initializable {
         GameScene.getRoot().requestFocus();
         FP.currentStage.setScene(GameScene);
     }
-    ///1
+    
 }
