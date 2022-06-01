@@ -15,60 +15,56 @@
 
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finalproject.finalprojecttest.Controller3">
     <children>
-      <ImageView fitHeight="822.0" fitWidth="1494.0" layoutX="285.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="750.0" fitWidth="753.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../grass.jpg" />
+            <Image url="@../../stone-wall.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="822.0" fitWidth="1494.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../grass.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="458.0" fitWidth="764.0" layoutX="12.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="458.0" fitWidth="764.0" layoutX="34.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../跑到.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="458.0" fitWidth="764.0" layoutX="728.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="750.0" fitWidth="750.0" layoutX="825.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2">
+         <image>
+            <Image url="@../../stone-wall.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="458.0" fitWidth="764.0" layoutX="750.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../跑到.png" />
          </image>
       </ImageView>
-        <Pane fx:id="dicePane" layoutX="121.0" layoutY="417.0" prefHeight="322.0" prefWidth="1262.0" visible="false">
+        <Pane fx:id="dicePane" layoutX="488.0" layoutY="497.0" prefHeight="134.0" prefWidth="600.0" visible="false">
             <children>
-                <Label fx:id="label" alignment="TOP_LEFT" layoutX="-104.0" layoutY="3.0" prefHeight="301.0" prefWidth="1170.0" text="Label">
+                <Label fx:id="label" layoutX="276.0" layoutY="26.0" text="Label" />
+                <Button fx:id="checkButton" layoutX="377.0" layoutY="116.0" mnemonicParsing="false" onAction="#checkButtonOnPressed" prefHeight="38.0" prefWidth="101.0" text="Ok!" visible="false">
                <font>
-                  <Font size="24.0" />
-               </font></Label>
-                <Button fx:id="checkButton" layoutX="1075.0" layoutY="200.0" mnemonicParsing="false" onAction="#checkButtonOnPressed" prefHeight="79.0" prefWidth="146.0" text="Ok!" visible="false">
-               <font>
-                  <Font name="Comic Sans MS" size="36.0" />
-               </font>
-            </Button>
-                <RadioButton fx:id="button1" layoutX="163.0" layoutY="200.0" mnemonicParsing="false" text="RadioButton">
+                  <Font name="Comic Sans MS" size="18.0" />
+               </font></Button>
+                <RadioButton fx:id="button1" layoutX="163.0" layoutY="90.0" mnemonicParsing="false" text="RadioButton">
                     <toggleGroup>
                         <ToggleGroup fx:id="toggleGroup" />
                     </toggleGroup>
                <font>
-                  <Font name="Comic Sans MS Bold" size="48.0" />
+                  <Font name="Comic Sans MS Bold" size="18.0" />
                </font>
                 </RadioButton>
-                <RadioButton fx:id="button2" layoutX="304.0" layoutY="200.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$toggleGroup">
+                <RadioButton fx:id="button2" layoutX="304.0" layoutY="90.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$toggleGroup">
                <font>
-                  <Font name="Comic Sans MS Bold" size="48.0" />
+                  <Font name="Comic Sans MS Bold" size="18.0" />
                </font></RadioButton>
             </children>
         </Pane>
-        <Button fx:id="clickButton" layoutX="1189.0" layoutY="449.0" mnemonicParsing="false" onAction="#Click" prefHeight="108.0" prefWidth="135.0" style="-fx-background-image: font2.png;">
+        <Button fx:id="clickButton" layoutX="756.0" layoutY="490.0" mnemonicParsing="false" onAction="#Click" prefHeight="46.0" prefWidth="58.0" style="-fx-background-image: font2.png;">
          <graphic>
-            <ImageView fitHeight="95.0" fitWidth="123.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="40.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../png_dice_30474.png" />
                </image>
             </ImageView>
          </graphic></Button>
-      <GridPane fx:id="board1" layoutX="32.0" layoutY="137.0" prefHeight="38.0" prefWidth="1468.0">
+      <GridPane fx:id="board1" layoutX="54.0" layoutY="140.0" prefHeight="38.0" prefWidth="1468.0">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -128,7 +124,7 @@
             <Font name="Comic Sans MS" size="18.0" />
          </font>
       </Button>
-      <GridPane fx:id="board2" layoutX="29.0" layoutY="313.0" prefHeight="38.0" prefWidth="1468.0">
+      <GridPane fx:id="board2" layoutX="51.0" layoutY="316.0" prefHeight="38.0" prefWidth="1468.0">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -179,6 +175,5 @@
          </children>
       </GridPane>
       <Button layoutX="115.0" layoutY="490.0" mnemonicParsing="false" onAction="#Start" text="Change Scene" />
-      <Button layoutX="115.0" layoutY="531.0" mnemonicParsing="false" onAction="#Start2" text="Change Scene 2" />
     </children>
 </AnchorPane>
