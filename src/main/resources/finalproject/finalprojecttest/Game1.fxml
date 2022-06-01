@@ -130,10 +130,20 @@
             </ImageView>
          </children>
       </GridPane>
-      <Label layoutX="419.0" layoutY="21.0" prefHeight="126.0" prefWidth="369.0" text="你踩到特殊格子!" textAlignment="CENTER" textFill="WHITE">
+      <Label layoutX="476.0" layoutY="23.0" prefHeight="126.0" prefWidth="353.0" text="你踩到特殊格子!" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
+      <Label fx:id="turnLabel" alignment="CENTER" layoutX="379.0" layoutY="591.0" prefHeight="126.0" prefWidth="540.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Button fx:id="returnBtn" layoutX="949.0" layoutY="566.0" mnemonicParsing="false" onAction="#Start" prefHeight="126.0" prefWidth="217.0" style="-fx-background-color: black; -fx-border-color: white;" text="回首頁" textFill="WHITE" visible="false">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
@@ -75,6 +76,11 @@ public class Game1Controller implements Initializable {
     @FXML
     Button b22;
 
+    @FXML
+    Label turnLabel;
+    @FXML
+    Button returnBtn;
+
 
     @FXML
     public void button00() throws IOException {
@@ -126,7 +132,7 @@ public class Game1Controller implements Initializable {
         }
         else if(Controller3.thePlayerBeSelect == 1)
         {
-            cross01.setVisible(true);
+            cross02.setVisible(true);
             b02.setText("x");
             b02.setDisable(true);
             checkWin();
@@ -258,10 +264,25 @@ public class Game1Controller implements Initializable {
     @Override
     public void initialize(URL u, ResourceBundle rb)
     {
-        //childrens.get(1).setVisible(false);
+        if(Controller3.thePlayerBeSelect == 0)
+        {
+            turnLabel.setText("Player 1 turn!");
+        }
+        else if(Controller3.thePlayerBeSelect == 1)
+        {
+            turnLabel.setText("Player 2 turn!");
+        }
     }
 
     public void checkWin() throws IOException {
+        if(Controller3.thePlayerBeSelect == 0)
+        {
+            turnLabel.setText("Player 2 turn!");
+        }
+        else if(Controller3.thePlayerBeSelect == 1)
+        {
+            turnLabel.setText("Player 1 turn!");
+        }
         for (int a = 0; a < 8; a++) {
             String line = switch (a) {
                 case 0 -> b00.getText() + b01.getText() + b02.getText();
@@ -278,13 +299,17 @@ public class Game1Controller implements Initializable {
             //X winner
             if (line.equals("xxx")) {
                 Controller3.data.setWhoWin(2);
-                Start();
+                turnLabel.setText("PLAYER 2 WON");
+                returnBtn.setVisible(true);
+                //Start();
             }
 
             //O winner
             else if (line.equals("ooo")) {
                 Controller3.data.setWhoWin(1);
-                Start();
+                turnLabel.setText("PLAYER 1 WON");
+                returnBtn.setVisible(true);
+                //Start();
             }
 
     }
